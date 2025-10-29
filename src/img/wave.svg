@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <defs>
+    <linearGradient id="waveGradient" gradientTransform="rotate(90)">
+      <stop offset="24%" stop-color="rgba(184, 228, 255, 1)"></stop>
+      <stop offset="100%" stop-color="rgba(248, 255, 232, 1)"></stop>
+    </linearGradient>
+  </defs>
+  <path fill="url(#waveGradient)" fill-opacity="1" d="M0,320L60,304C120,288,240,256,360,245.3C480,235,600,245,720,229.3C840,213,960,171,1080,170.7C1200,171,1320,213,1380,234.7L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+</svg>

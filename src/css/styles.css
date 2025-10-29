@@ -1,0 +1,379 @@
+/* === Variables Globales === */
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --color-primary: #FF6B6B;
+    --color-text: #4A4A4A;
+    --color-text-light: #757575;
+    --color-bg-light: #E6F7FF;
+    --color-white: #FFFFFF;
+    --container-width: 1200px;
+}
+
+/* === Estilos Generales === */
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: var(--container-width);
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* === Header y Navegación === */
+.header {
+    background: linear-gradient(180deg, var(--color-bg-light) 85%, var(--color-white) 100%);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.logo svg path {
+    fill: #4CAF50;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--color-text);
+}
+
+.navigation a.active {
+    color: var(--color-text);
+    font-weight: 700;
+    border-bottom: 2px solid #4CAF50;
+}
+
+
+/* === Sección Hero === */
+.hero {
+    background: url('/src/img/wave.svg') no-repeat bottom;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex-basis: 50%;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 107, 107, 0.5);
+}
+
+.hero-image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: var(--color-text-light);
+}
+
+/* === Sección Categorías === */
+.categories {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.category-image-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.category-card:hover .category-image-wrapper {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; 
+}
+
+/* === Responsive para tableg === */
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/* === Responsive para cel === */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 3rem 0;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .navigation ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+    }
+
+    .navigation a {
+        padding-bottom: 0.25rem;
+    }
+}
+
+/* === Footer === */
+.footer {
+    background-color: #f8f9fa;
+    color: var(--color-text-light);
+    padding: 2.5rem 0;
+    border-top: 1px solid #e9ecef;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .logo {
+    gap: 0.5rem;
+}
+
+.footer .logo h3 {
+    font-size: 1.25rem;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* === ResponsiveFooter === */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* === Estilos de Página (Perros, Gatos, etc.) === */
+
+/* Encabezado */
+.guide-header {
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 3rem;
+}
+
+.guide-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.guide-header p {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+}
+
+/* Contenido */
+.guide-content {
+    display: grid;
+    grid-template-columns: 70% 1fr; 
+    gap: 3rem;
+}
+
+.guide-main h3 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.guide-main p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Barra lateral */
+.guide-sidebar {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.guide-sidebar h4 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.guide-sidebar ul {
+    padding-left: 1rem;
+}
+
+.guide-sidebar li {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+    .guide-content {
+        grid-template-columns: 1fr; 
+    }
+
+    .guide-sidebar {
+        margin-top: 2rem;
+    }
+}
