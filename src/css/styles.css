@@ -21,6 +21,11 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
 p {
     margin: 0;
 }
@@ -208,7 +213,111 @@ ul {
     border-radius: 50%;
     background-position: center;
     background-size: cover;
-    overflow: hidden; 
+    overflow: hidden;
+}
+
+/* === Sección Acerca de === */
+.about {
+    padding: 4rem 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.section-kicker {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+    color: var(--color-text);
+    line-height: 1.8;
+}
+
+.about-highlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-highlight h3 {
+    margin-bottom: 0.75rem;
+}
+
+/* === Tips Rápidos === */
+.quick-tips {
+    padding: 4rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin: 0.35rem 0;
+}
+
+.section-subtitle {
+    color: var(--color-text-light);
+    font-size: 1rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.tip-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.tip-card p {
+    color: var(--color-text-light);
+    line-height: 1.6;
 }
 
 /* === Responsive para tableg === */
@@ -260,19 +369,16 @@ ul {
 
 /* === Footer === */
 .footer {
-    background-color: #f8f9fa;
-    color: var(--color-text-light);
-    padding: 2.5rem 0;
-    border-top: 1px solid #e9ecef;
+    background-color: #0d1b2a;
+    color: #dce3ed;
+    padding: 3.5rem 0;
     margin-top: 4rem;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2rem;
 }
 
 .footer .logo {
@@ -281,20 +387,56 @@ ul {
 
 .footer .logo h3 {
     font-size: 1.25rem;
-    color: var(--color-text);
+    color: #fff;
     font-weight: 700;
 }
 
 .footer p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #dce3ed;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.footer-brand p {
+    color: #dce3ed;
+    margin-top: 0.5rem;
+}
+
+.footer-copy {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
 }
 
 /* === ResponsiveFooter === */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 }
 
@@ -367,13 +509,84 @@ ul {
     line-height: 1.6;
 }
 
+/* === Páginas Informativas === */
+.info-page {
+    padding: 3rem 0 4rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.info-intro {
+    background: linear-gradient(135deg, #f4fbff 0%, #ffffff 100%);
+    padding: 2.5rem;
+    border: 1px solid #e3f2fd;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.info-intro h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.info-intro p {
+    font-size: 1.05rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.info-section {
+    background-color: #f9fafb;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+}
+
+.info-section p,
+.info-section li {
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.info-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+}
+
+.info-list li + li {
+    margin-top: 0.5rem;
+}
+
 /* === Responsive === */
 @media (max-width: 992px) {
     .guide-content {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .guide-sidebar {
         margin-top: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .tips-grid {
+        grid-template-columns: 1fr;
     }
 }

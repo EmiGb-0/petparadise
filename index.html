@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pet Paradise es tu guía completa para cuidar perros, gatos, peces, aves, reptiles y conejos con consejos claros, responsables y prácticos.">
+    <meta name="keywords" content="cuidado de mascotas, perros, gatos, peces, aves, reptiles, conejos, adopción responsable, guías de mascotas">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +34,8 @@
                     <li><a href="aves.html">Aves</a></li>
                     <li><a href="reptiles.html">Reptiles</a></li>
                     <li><a href="conejos.html">Conejos</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="fuentes.html">Fuentes</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,13 +44,32 @@
     <main>
         <section class="hero">
             <div class="hero-container container">
-                <div class="hero-text">
-                    <h2>Encuentra tu compañero perfecto</h2>
-                    <p>Explora un mundo de amigos animales</p>
-                    <a href="#categorias" class="btn btn-primary">¡Empieza aquí!</a>
+            <div class="hero-text">
+                <h2>Encuentra tu compañero perfecto</h2>
+                <p>Explora un mundo de amigos animales con guías confiables, listas rápidas y recomendaciones respaldadas por veterinarios.</p>
+                <a href="#categorias" class="btn btn-primary">¡Empieza aquí!</a>
+            </div>
+            <div class="hero-image">
+                <img src="/src/img/bganimals.png" alt="Imagenes de animales">
+            </div>
+        </div>
+    </section>
+
+        <section class="about container" aria-labelledby="about-heading">
+            <div class="about-content">
+                <div>
+                    <p class="section-kicker">¿Qué es Pet Paradise?</p>
+                    <h2 id="about-heading">Tu centro de recursos para el cuidado responsable</h2>
+                    <p>Pet Paradise reúne en un mismo lugar consejos esenciales, pautas de seguridad y recomendaciones veterinarias para que cualquier persona pueda ofrecer bienestar a su mascota desde el primer día.</p>
+                    <ul class="about-list">
+                        <li>Guías prácticas por especie con pasos accionables.</li>
+                        <li>Recomendaciones de alimentación, hábitat, salud y enriquecimiento.</li>
+                        <li>Consejos de urgencias, calendario de vacunas y alertas de riesgo.</li>
+                    </ul>
                 </div>
-                <div class="hero-image">
-                    <img src="/src/img/bganimals.png" alt="Imagenes de animales">
+                <div class="about-highlight" role="note">
+                    <h3>Información clave</h3>
+                    <p>Somos un sitio educativo enfocado en <strong>cuidado responsable</strong> y <strong>bienestar animal</strong>. Cada categoría contiene listas rápidas y recordatorios visuales para que no olvides lo esencial.</p>
                 </div>
             </div>
         </section>
@@ -118,16 +141,60 @@
 
             </div>
         </section>
+
+        <section class="quick-tips container" aria-labelledby="quick-tips-heading">
+            <div class="section-header">
+                <p class="section-kicker">Empieza informado</p>
+                <h2 id="quick-tips-heading">Consejos rápidos para cualquier cuidador</h2>
+                <p class="section-subtitle">Aplica estos básicos sin importar la especie de tu mascota.</p>
+            </div>
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <h3>Salud preventiva</h3>
+                    <p>Programa revisiones veterinarias y vacunas, observa cambios de apetito o energía y actúa ante señales tempranas.</p>
+                </article>
+                <article class="tip-card">
+                    <h3>Ambiente seguro</h3>
+                    <p>Elimina tóxicos, resguarda cables y plantas peligrosas, y habilita zonas tranquilas para descanso.</p>
+                </article>
+                <article class="tip-card">
+                    <h3>Enriquecimiento diario</h3>
+                    <p>Ofrece juguetes, retos de olfato o escalada y sesiones de juego para reducir estrés y conductas destructivas.</p>
+                </article>
+                <article class="tip-card">
+                    <h3>Higiene y agua</h3>
+                    <p>Mantén bebederos limpios, arena o peceras higienizadas y rutina de cepillado o baños según la especie.</p>
+                </article>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer-container container">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10.5 15.5C10.5 15.5 10 16.5 9 16.5C8 16.5 7.5 15.5 7.5 15.5C7.5 14.5 8 14 9 14C10 14 10.5 14.5 10.5 15.5ZM16.5 15.5C16.5 15.5 16 16.5 15 16.5C14 16.5 13.5 15.5 13.5 15.5C13.5 14.5 14 14 15 14C16 14 16.5 14.5 16.5 15.5ZM16.09 11.5C15.69 11.8 15.19 12 14.5 12C13.81 12 13.31 11.8 12.91 11.5C12.71 11.3 12.31 11.3 12.11 11.5C11.71 11.8 11.19 12 10.5 12C9.81 12 9.31 11.8 8.91 11.5C8.71 11.3 8.31 11.3 8.11 11.5C7.71 11.8 7.19 12 6.5 12C5.81 12 5.31 11.8 4.91 11.5C4.71 11.3 4.31 11.3 4.11 11.5C3.71 11.8 3.19 12 2.5 12V10C3.19 10 3.71 9.8 4.11 9.5C4.31 9.7 4.71 9.7 4.91 9.5C5.31 9.2 5.81 9 6.5 9C7.19 9 7.71 9.2 8.11 9.5C8.31 9.7 8.71 9.7 8.91 9.5C9.31 9.2 9.81 9 10.5 9C11.19 9 11.71 9.2 12.11 9.5C12.31 9.7 12.71 9.7 12.91 9.5C13.31 9.2 13.81 9 14.5 9C15.19 9 15.71 9.2 16.11 9.5C16.31 9.7 16.71 9.7 16.91 9.5C17.31 9.2 17.81 9 18.5 9C19.19 9 19.71 9.2 20.11 9.5C20.31 9.7 20.71 9.7 20.91 9.5C21.31 9.2 21.81 9 22.5 9V12C21.81 12 21.31 11.8 20.91 11.5C20.71 11.3 20.31 11.3 20.11 11.5C19.71 11.8 19.19 12 18.5 12C17.81 12 17.31 11.8 16.91 11.5C16.71 11.3 16.31 11.3 16.09 11.5Z" fill="#4CAF50"/>
-                </svg>
-                <h3>Pet Paradise</h3>
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10.5 15.5C10.5 15.5 10 16.5 9 16.5C8 16.5 7.5 15.5 7.5 15.5C7.5 14.5 8 14 9 14C10 14 10.5 14.5 10.5 15.5ZM16.5 15.5C16.5 15.5 16 16.5 15 16.5C14 16.5 13.5 15.5 13.5 15.5C13.5 14.5 14 14 15 14C16 14 16.5 14.5 16.5 15.5ZM16.09 11.5C15.69 11.8 15.19 12 14.5 12C13.81 12 13.31 11.8 12.91 11.5C12.71 11.3 12.31 11.3 12.11 11.5C11.71 11.8 11.19 12 10.5 12C9.81 12 9.31 11.8 8.91 11.5C8.71 11.3 8.31 11.3 8.11 11.5C7.71 11.8 7.19 12 6.5 12C5.81 12 5.31 11.8 4.91 11.5C4.71 11.3 4.31 11.3 4.11 11.5C3.71 11.8 3.19 12 2.5 12V10C3.19 10 3.71 9.8 4.11 9.5C4.31 9.7 4.71 9.7 4.91 9.5C5.31 9.2 5.81 9 6.5 9C7.19 9 7.71 9.2 8.11 9.5C8.31 9.7 8.71 9.7 8.91 9.5C9.31 9.2 9.81 9 10.5 9C11.19 9 11.71 9.2 12.11 9.5C12.31 9.7 12.71 9.7 12.91 9.5C13.31 9.2 13.81 9 14.5 9C15.19 9 15.71 9.2 16.11 9.5C16.31 9.7 16.71 9.7 16.91 9.5C17.31 9.2 17.81 9 18.5 9C19.19 9 19.71 9.2 20.11 9.5C20.31 9.7 20.71 9.7 20.91 9.5C21.31 9.2 21.81 9 22.5 9V12C21.81 12 21.31 11.8 20.91 11.5C20.71 11.3 20.31 11.3 20.11 11.5C19.71 11.8 19.19 12 18.5 12C17.81 12 17.31 11.8 16.91 11.5C16.71 11.3 16.31 11.3 16.09 11.5Z" fill="#4CAF50"/>
+                    </svg>
+                    <h3>Pet Paradise</h3>
+                </div>
+                <p>Tu guía clara y confiable para el cuidado responsable de mascotas. Contenido en español, con listas rápidas y buenas prácticas verificadas.</p>
             </div>
-            <p>&copy; 2025 Pet Paradise. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="perros.html">Guías</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="fuentes.html">Fuentes</a></li>
+                    <li><a href="mailto:hola@petparadise.com">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Consejo express</h4>
+                <p><strong>Agua limpia y fresca</strong> es la primera regla para todas las especies. Revisa bebederos y peceras cada día.</p>
+                <p class="footer-copy">&copy; 2025 Pet Paradise. Información educativa, no sustituye a la consulta veterinaria.</p>
+            </div>
         </div>
     </footer>
 </body>
